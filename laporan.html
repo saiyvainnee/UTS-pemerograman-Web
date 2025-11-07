@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laporan Pemesanan</title>
+    <link rel="stylesheet" href="css/style.css">
+    </head>
+<body>
+    <header>
+        <h1>Laporan Rekapitulasi Pemesanan</h1>
+    </header>
+
+    <main class="dashboard-container">
+        <h2>Data Kinerja Penjualan</h2>
+        
+        <div class="report-grid">
+            <div class="report-card">
+                <h3>Total Transaksi</h3>
+                <div class="value" id="totalTransaksi">0</div>
+            </div>
+            <div class="report-card">
+                <h3>Total Pendapatan (Keseluruhan)</h3>
+                <div class="value" id="totalPendapatan">Rp 0</div>
+            </div>
+            <div class="report-card">
+                <h3>Buku Terlaris</h3>
+                <div class="value" id="bukuTerlaris">-</div>
+            </div>
+            <div class="report-card">
+                <h3>Stok Terendah</h3>
+                <div class="value" id="stokTerendah">-</div>
+            </div>
+        </div>
+
+        <br>
+        <p><a href="dashboard.html">← Kembali ke Dashboard</a></p>
+    </main>
+
+    <script src="js/data.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
