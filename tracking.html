@@ -1,0 +1,52 @@
+    <!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tracking Pengiriman</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Tracking Pengiriman</h1>
+    </header>
+
+    <main class="dashboard-container">
+        <div class="form-section">
+            <h3>Cari Status Pengiriman</h3>
+            <form id="trackingForm">
+                <div class="form-group">
+                    <label for="doNumber">Nomor Delivery Order:</label>
+                    <input type="text" id="doNumber" placeholder="Contoh: DO-12345" required>
+                </div>
+                <button type="submit" id="searchButton">Cari</button> </form>
+        </div>
+
+        <div id="trackingResult" style="display: none;">
+            <hr>
+            <h2>Hasil Pelacakan</h2>
+            
+            <h3 id="pemesanName"></h3>
+
+            <h4>Status Pengiriman: <span id="currentStatusText"></span></h4>
+            <div class="progress-container">
+                <div class="progress-bar" id="progressBar"></div>
+            </div>
+            
+            <div class="tracking-details">
+                <h4>Detail Pesanan</h4>
+                <p><strong>Ekspedisi:</strong> <span id="detailEkspedisi"></span></p>
+                <p><strong>Tanggal Kirim:</strong> <span id="detailTanggalKirim"></span></p>
+                <p><strong>Jenis Paket:</strong> <span id="detailJenisPaket"></span></p>
+                <p><strong>Total Pembayaran:</strong> <span id="detailTotalBayar"></span></p>
+            </div>
+        </div>
+
+        <br>
+        <p><a href="dashboard.html">← Kembali ke Dashboard</a></p>
+    </main>
+
+    <script src="js/data.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

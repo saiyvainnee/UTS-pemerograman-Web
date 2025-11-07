@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Pemrograman Web 1</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Aplikasi Pemesanan Buku Online</h1>
+    </header>
+
+    <main class="login-container">
+        <h2>Halaman Login</h2>
+        <form id="loginForm">
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required> </div>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required> </div>
+            
+            <button type="submit" id="loginButton">Login</button> <div class="login-links">
+                <button type="button" class="link-button" id="lupaPasswordBtn">Lupa Password</button> <button type="button" class="link-button" id="daftarBtn">Daftar</button> </div>
+        </form>
+    </main>
+
+    <div id="modalBox" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h3 id="modalTitle"></h3>
+            <p id="modalBody"></p>
+        </div>
+    </div>
+    
+    <script src="js/data.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

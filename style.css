@@ -1,0 +1,275 @@
+/* css/style.css - CSS Eksternal */
+
+/* GLOBAL RESETS AND TYPOGRAPHY */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f7f6;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* HEADER AND LAYOUT */
+header {
+    background-color: #007bff; /* Warna Primer */
+    color: white;
+    width: 100%;
+    text-align: center;
+    padding: 1.5em 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+main {
+    flex-grow: 1;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.dashboard-container, .login-container {
+    background-color: white;
+    padding: 30px;
+    margin: 30px auto;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    max-width: 900px;
+}
+
+/* FORMS AND INPUTS */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #007bff;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"], 
+.form-group input[type="password"],
+.form-group input[type="number"],
+.form-group textarea,
+.form-group select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ced4da;
+    border-radius: 6px;
+    box-sizing: border-box;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus, .form-group textarea:focus, .form-group select:focus {
+    border-color: #0056b3;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+    outline: none;
+}
+
+/* BUTTONS */
+button, .nav-list a {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s, transform 0.1s;
+    font-weight: bold;
+}
+
+/* Primary Button (General) */
+button[type="submit"], #loginButton {
+    background-color: #28a745; /* Hijau */
+    color: white;
+    width: 100%;
+    margin-top: 10px;
+}
+
+button[type="submit"]:hover, #loginButton:hover {
+    background-color: #218838;
+}
+
+/* Link Buttons (Login Page) */
+.link-button {
+    background: none;
+    color: #007bff;
+    padding: 5px;
+    width: 48%;
+    font-size: 14px;
+    text-align: center;
+    text-decoration: underline;
+}
+
+.link-button:hover {
+    color: #0056b3;
+}
+
+.login-links {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+/* TABLES (STOK & CHECKOUT) */
+.catalog-table, .order-table, .tracking-details table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.catalog-table th, .order-table th, 
+.catalog-table td, .order-table td {
+    border: 1px solid #e9ecef;
+    padding: 12px;
+    text-align: left;
+}
+
+.catalog-table th, .order-table th {
+    background-color: #007bff;
+    color: white;
+    font-weight: 600;
+}
+
+.catalog-table img {
+    width: 60px;
+    height: auto;
+    border-radius: 4px;
+}
+
+.total-row td {
+    font-weight: bold;
+    background-color: #fff3cd; /* Warna kuning lembut */
+    color: #856404;
+}
+
+/* MODAL BOX */
+.modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1000; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    background-color: rgba(0,0,0,0.6); 
+    padding-top: 60px;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto; 
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    width: 90%; 
+    max-width: 400px;
+    position: relative;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
+
+.close-btn {
+    color: #aaa;
+    float: right;
+    font-size: 30px;
+    font-weight: bold;
+    line-height: 1;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* DASHBOARD NAVIGATION */
+.main-navigation {
+    margin-top: 30px;
+}
+
+.nav-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+}
+
+.nav-list li {
+    flex: 1 1 calc(50% - 15px); /* Dua kolom pada desktop, satu kolom pada mobile */
+    min-width: 250px;
+}
+
+.nav-list a {
+    display: block;
+    text-align: center;
+    background-color: #e9f0ff; 
+    color: #007bff;
+    text-decoration: none;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.nav-list a:hover {
+    background-color: #d0e0ff;
+    transform: translateY(-2px);
+}
+
+.logout-link {
+    background-color: #dc3545 !important;
+    color: white !important;
+}
+
+.logout-link:hover {
+    background-color: #c82333 !important;
+}
+
+/* TRACKING PAGE */
+.progress-container {
+    width: 100%;
+    background-color: #e9ecef;
+    border-radius: 10px;
+    margin: 20px 0;
+    overflow: hidden;
+    height: 35px;
+    position: relative;
+}
+.progress-bar {
+    height: 100%;
+    background-color: #17a2b8; /* Biru muda/Cyan */
+    text-align: center;
+    line-height: 35px;
+    color: white;
+    transition: width 0.8s ease-in-out; 
+    font-weight: bold;
+}
+
+.tracking-details {
+    margin-top: 25px;
+    border: 1px solid #007bff;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #f0f7ff;
+}
+
+.tracking-details p {
+    margin: 10px 0;
+    border-bottom: 1px dashed #ced4da;
+    padding-bottom: 5px;
+}
+.tracking-details p:last-child {
+    border-bottom: none;
+}
+.tracking-details strong {
+    display: inline-block;
+    width: 150px;
+    color: #0056b3;
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informasi Stok/Katalog</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Informasi Stok & Katalog Buku</h1>
+    </header>
+
+    <main class="dashboard-container">
+        <h2>Daftar Katalog Buku</h2>
+        <table class="catalog-table">
+            <thead>
+                <tr>
+                    <th>Gambar</th>
+                    <th>ID</th>
+                    <th>Judul</th>
+                    <th>Penulis</th>
+                    <th>Stok</th>
+                    <th>Harga</th>
+                </tr>
+            </thead>
+            <tbody id="katalogTableBody">
+                </tbody>
+        </table>
+
+        <hr>
+
+        <div class="form-section add-form-container">
+            <h3>Tambahkan Baris Stok Baru</h3>
+            <form id="addStockForm">
+                <div class="form-group">
+                    <label for="newJudul">Judul:</label>
+                    <input type="text" id="newJudul" required>
+                </div>
+                <div class="form-group">
+                    <label for="newPenulis">Penulis:</label>
+                    <input type="text" id="newPenulis" required>
+                </div>
+                <div class="form-group">
+                    <label for="newStok">Stok:</label>
+                    <input type="number" id="newStok" required min="1">
+                </div>
+                <div class="form-group">
+                    <label for="newHarga">Harga (Rp):</label>
+                    <input type="number" id="newHarga" required min="1000">
+                </div>
+                
+                <button type="submit">Tambah Stok Baru (DOM)</button>
+            </form>
+        </div>
+        <br>
+        <p><a href="dashboard.html">← Kembali ke Dashboard</a></p>
+    </main>
+
+    <script src="js/data.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
